@@ -1,0 +1,11 @@
+<div class="position-absolute start-50 translate-middle" style="top:40%">
+    <div class="ml-3">
+        <!--Using Property Binding and data binding-->
+        <h1 [style]="styleSize">{{count}}</h1>
+    </div>
+</div>
+<div class="position-absolute start-50 translate-middle" id="buttons-div">
+    <!--event handling-->
+    <button type="button" class="btn btn-dark btn-lg" id="b1" (click)="decrement()">-</button>
+    <button type="button" class="btn btn-primary btn-lg" id="b2" (click)="increment()">+</button>
+</div>
