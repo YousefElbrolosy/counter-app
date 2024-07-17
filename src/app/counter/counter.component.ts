@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { User } from '../user';
 
 @Component({
   selector: 'app-counter',
@@ -7,19 +8,31 @@ import { Component } from '@angular/core';
 })
 export class CounterComponent {
   //the count that is incremented
-  count:number = 0;
+  users: User[] = [
+    { name: "ahmed", age: 3, gender: "male", salary: 33 },
+    { name: "Yousef", age: 3, gender: "male", salary: 33, hello:function(){
+      return "hello";
+    } },
+    { name: "adham", age: 3, gender: "male", salary: 33 },
+    { name: "soha", age: 21, gender: "female", salary: 33 }
+  ]
+
+
+
+
+  count: number = 0;
   //size of Count
-  styleSize:string = "font-size:450px;"
+  styleSize: string = "font-size:450px;"
   //increment function
-  increment(){
-    this.count = this.count+1;
+  increment() {
+    this.count = this.count + 1;
   }
   //decrement function
-  decrement(){
-    this.count = this.count-1;
+  decrement() {
+    this.count = this.count - 1;
   }
 
-  constructor(){
+  constructor() {
 
   }
 }

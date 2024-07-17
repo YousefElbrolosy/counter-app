@@ -1,0 +1,21 @@
+<table *ngIf="users.length>3; else hambozo" class="table">
+    <thead>
+        <th>Name</th>
+        <th>Age</th>
+        <th>Gender</th>
+        <th>Salary</th>
+        <th>Hello</th>
+    </thead>
+    <tbody>
+        <tr *ngFor="let x of users">
+            <td>{{x.name}}</td>
+            <td>{{x.age}}</td>
+            <td>{{x.gender}}</td>
+            <td>{{x.salary}}</td>
+            <td>{{x.hello?x.hello():''}}</td>
+        </tr>
+    </tbody>
+</table>
+<ng-template #hambozo>
+    <h1 class="text-center">No Data</h1>
+</ng-template>
